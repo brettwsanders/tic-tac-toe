@@ -1,0 +1,21 @@
+
+table {
+  float: left;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+td {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 100px;
+  min-width: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.message-board {
+  display: inline-block;
+  width: 300px;
+  padding-left: 20px;
+}

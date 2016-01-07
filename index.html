@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="ticTacToe">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+<body ng-controller="ticTacToeController as ticTacCtrl">
+  <div class="message-board">
+  <p ng-hide="ticTacCtrl.gameOver">Current player: {{ticTacCtrl.current}}</p>
+  <p>{{ticTacCtrl.message}}</p>
+  <button ng-show="ticTacCtrl.gameOver" ng-click="ticTacCtrl.newGame()">Play Again</button>
+  </div>
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <td ng-click="ticTacCtrl.toggle(0, 0)">{{ticTacCtrl.matrix[0][0]}}</td>
+      <td ng-click="ticTacCtrl.toggle(0, 1)">{{ticTacCtrl.matrix[0][1]}}</td>
+      <td ng-click="ticTacCtrl.toggle(0, 2)">{{ticTacCtrl.matrix[0][2]}}</td>
+    </tr>
+    <tr>
+      <td ng-click="ticTacCtrl.toggle(1, 0)">{{ticTacCtrl.matrix[1][0]}}</td>
+      <td ng-click="ticTacCtrl.toggle(1, 1)">{{ticTacCtrl.matrix[1][1]}}</td>
+      <td ng-click="ticTacCtrl.toggle(1, 2)">{{ticTacCtrl.matrix[1][2]}}</td>
+    </tr>
+    <tr>
+      <td ng-click="ticTacCtrl.toggle(2, 0)">{{ticTacCtrl.matrix[2][0]}}</td>
+      <td ng-click="ticTacCtrl.toggle(2, 1)">{{ticTacCtrl.matrix[2][1]}}</td>
+      <td ng-click="ticTacCtrl.toggle(2, 2)">{{ticTacCtrl.matrix[2][2]}}</td>
+    </tr>
+  </table>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
